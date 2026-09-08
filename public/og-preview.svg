@@ -1,0 +1,101 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5" />
+      <stop offset="100%" stop-color="#F2EFE8" />
+    </linearGradient>
+
+    <!-- Warm accent glow -->
+    <radialGradient id="glow" cx="85%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#3A7F76" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#3A7F76" stop-opacity="0" />
+    </radialGradient>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Inter:wght@400;500&amp;display=swap');
+
+      .brand-badge {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        fill: #3A7F76;
+      }
+      .event-sub {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        fill: #737A83;
+      }
+      .headline-display {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 88px;
+        font-weight: 600;
+        line-height: 1.05;
+        fill: #1C242C;
+      }
+      .subtitle {
+        font-family: 'Inter', sans-serif;
+        font-size: 26px;
+        fill: #5D6672;
+      }
+      .footer-handle {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 17px;
+        letter-spacing: 0.2em;
+        fill: #3A7F76;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bg-grad)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+
+  <!-- Outer Architectural Border Frame -->
+  <rect x="36" y="36" width="1128" height="558" rx="28" fill="none" stroke="#1C242C" stroke-width="1.5" stroke-opacity="0.1" />
+  <rect x="52" y="52" width="1096" height="526" rx="20" fill="none" stroke="#1C242C" stroke-width="1" stroke-opacity="0.05" />
+
+  <!-- Top Badges -->
+  <g transform="translate(100, 130)">
+    <!-- Pill Tag -->
+    <rect x="0" y="-24" width="210" height="40" rx="20" fill="#3A7F76" fill-opacity="0.1" stroke="#3A7F76" stroke-width="1" stroke-opacity="0.25" />
+    <text x="105" y="1" class="brand-badge" text-anchor="middle">CookWithTife</text>
+    <text x="236" y="2" class="event-sub">FOOD TASTING 2.0</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="270" class="headline-display">AfterTaste.</text>
+  <text x="100" y="360" class="headline-display" font-style="italic" fill="#3A7F76">How was the food?</text>
+
+  <!-- Subtitle Quote -->
+  <text x="100" y="440" class="subtitle">Be honest. We can take it. 😌</text>
+
+  <!-- Decorative Dish Course Chips -->
+  <g transform="translate(100, 480)">
+    <!-- Chip 1 -->
+    <rect x="0" y="0" width="145" height="34" rx="17" fill="#FFFFFF" stroke="#1C242C" stroke-opacity="0.12" />
+    <text x="72" y="22" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="0.1em" fill="#5D6672" text-anchor="middle">PEPPER SOUP</text>
+
+    <!-- Chip 2 -->
+    <rect x="157" y="0" width="135" height="34" rx="17" fill="#FFFFFF" stroke="#1C242C" stroke-opacity="0.12" />
+    <text x="224" y="22" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="0.1em" fill="#5D6672" text-anchor="middle">FRIED RICE</text>
+
+    <!-- Chip 3 -->
+    <rect x="304" y="0" width="105" height="34" rx="17" fill="#FFFFFF" stroke="#1C242C" stroke-opacity="0.12" />
+    <text x="356" y="22" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="0.1em" fill="#5D6672" text-anchor="middle">PASTA</text>
+
+    <!-- Chip 4 -->
+    <rect x="421" y="0" width="115" height="34" rx="17" fill="#FFFFFF" stroke="#1C242C" stroke-opacity="0.12" />
+    <text x="478" y="22" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="0.1em" fill="#5D6672" text-anchor="middle">PARFAIT</text>
+  </g>
+
+  <!-- Bottom Right Signature -->
+  <g transform="translate(1050, 520)" text-anchor="end">
+    <text x="0" y="0" class="footer-handle">@cookwithtife</text>
+    <text x="0" y="24" font-family="'Cormorant Garamond', serif" font-size="22" font-style="italic" fill="#737A83">— Tife 🖤</text>
+  </g>
+</svg>
