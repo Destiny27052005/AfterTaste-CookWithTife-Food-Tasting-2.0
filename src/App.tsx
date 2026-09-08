@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
-import SurveyPage from "./route";
+import SurveyPage from "./route/index";
 
 export default function App() {
   return (
