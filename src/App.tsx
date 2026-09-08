@@ -1,39 +1,37 @@
-import { Routes, Route } from "react-router"
-import { Link } from "react-router-dom"
-import SurveyPage from "./route"
-function App() {
+import { Routes, Route, Link } from "react-router-dom";
+import SurveyPage from "./route";
 
+export default function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<SurveyPage />} />
-        <Route path="*" element={<NotFoundComponent />} />
-      </Routes>
-
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<SurveyPage />} />
+      <Route path="*" element={<NotFoundComponent />} />
+    </Routes>
+  );
 }
-
-export default App
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <main className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+        <p className="font-mono text-xs uppercase tracking-[0.35em] text-spice">
+          404 Error
         </p>
-        <div className="mt-6">
+        <h1 className="mt-4 font-display text-5xl font-bold text-foreground sm:text-6xl">
+          Lost your plate?
+        </h1>
+        <p className="mt-3 text-sm text-muted-foreground">
+          The page you are looking for doesn't exist, has been moved, or is no longer on the menu.
+        </p>
+        <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-spice px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-spice-foreground shadow-warm transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
-            Go home
+            Back to survey
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
