@@ -1,18 +1,32 @@
+export const QUESTION_IDS = [
+  "pepper-soup",
+  "fried-rice",
+  "pasta",
+  "parfait",
+  "overall",
+  "friend",
+] as const;
+
+export type QuestionId = (typeof QUESTION_IDS)[number];
+
 export type Question = {
-  id: string;
+  id: QuestionId;
   title: string;
   prompt: string;
-  options: string[];
+  options: readonly [string, string, string, ...string[]];
 };
 
-export const questions: Question[] = [
+export type SurveyAnswers = Partial<Record<QuestionId, string>>;
+export type CompletedSurveyAnswers = Record<QuestionId, string>;
+
+export const questions = [
   {
     id: "pepper-soup",
     title: "Pepper Soup",
     prompt: "How did it hit?",
     options: [
       "It needed more time on the fire",
-      "E do am it was good",
+      "E do am, it was good",
       "This is the best pepper soup I've had",
       "I need the recipe abeg",
     ],
@@ -36,7 +50,7 @@ export const questions: Question[] = [
       "Not my thing",
       "It was nice",
       "Pasta did not come to play today",
-      "Who made this? I have questions",
+      "Who cooked this? Let me shake your hand",
     ],
   },
   {
@@ -72,4 +86,4 @@ export const questions: Question[] = [
       "I'll bring two people minimum",
     ],
   },
-];
+] as const satisfies readonly Question[];
